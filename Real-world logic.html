@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Basic Student Grade System
+        // Create array of students with their grades
+        // Use a for loop to determine the highest, lowest, and average grades
+        // 90-100: A
+        // 80-89: B
+        // 70-79: C
+        // 60-69: D
+        // 0-59: F
+        const students = [
+            { name: "Alice", grade: 85 },
+            { name: "Bob", grade: 92 },
+            { name: "Charlie", grade: 78 },
+            { name: "David", grade: 65 },
+            { name: "Eve", grade: 50 }
+        ];
+
+        let highest = 0;
+        let lowest = 100;
+        let total = 0;
+
+        for (let i = 0; i < students.length; i++) {
+            const grade = students[i].grade;
+            if (grade > highest) highest = grade;
+            if (grade < lowest) lowest = grade;
+            total += grade;
+        }
+
+        const average = total / students.length;
+
+        console.log("Highest Grade:", highest);
+        console.log("Lowest Grade:", lowest);
+        console.log("Average Grade:", average);
+        console.log("Grade Distribution:");
+        for (let i = 0; i < students.length; i++) {
+            const student = students[i];
+            let letterGrade;
+            if (student.grade >= 90) letterGrade = "A";
+            else if (student.grade >= 80) letterGrade = "B";
+            else if (student.grade >= 70) letterGrade = "C";
+            else if (student.grade >= 60) letterGrade = "D";
+            else letterGrade = "F";
+            console.log(`${student.name}: ${letterGrade}`);
+        }
+
+    </script>
+</body>
+</html>
