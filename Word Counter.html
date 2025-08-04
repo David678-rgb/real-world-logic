@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Basic Word Counter
+        // Create a function that counts the number of words in a given sentence or paragraph
+        // A word is defined as a sequence of characters separated by whitespace
+        // Use a regular expression to split the string into words
+        // Return the count of words
+
+        function countWords(text) {
+            if (!text) return 0; // Handle empty string
+            const words = text.trim().match(/\S+/g); // Match non-whitespace sequences
+            return words ? words.length : 0; // Return word count or 0 if no words found
+        }
+
+        const sampleText = "Hello, this is a sample text for counting words.";
+        const wordCount = countWords(sampleText);
+
+        console.log("Word Count:", wordCount);
+    </script>   
+</body>
+</html>
