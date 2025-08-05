@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ATM Machine Simulator
+        //create a function that takes a balance amount and withdrawal amount as input
+        function atmMachineSimulator(balance, withdrawal) {
+            //check if the withdrawal amount is greater than the balance
+            if (withdrawal > balance) {
+                return "Insufficient funds";
+            } else {
+                //if sufficient funds, deduct the withdrawal amount from the balance
+                balance -= withdrawal;
+                return `Withdrawal successful. New balance: $${balance}`;
+            }
+            //if not show an error message
+            return "Error occurred";    
+            
+        }
+    </script>   
+</body>
+</html>
